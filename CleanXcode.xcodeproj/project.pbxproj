@@ -10,6 +10,8 @@
 		C5CEE1682332792600EB5D0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CEE1672332792600EB5D0F /* AppDelegate.swift */; };
 		C5CEE16A2332792700EB5D0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5CEE1692332792700EB5D0F /* Assets.xcassets */; };
 		C5CEE16D2332792700EB5D0F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5CEE16B2332792700EB5D0F /* MainMenu.xib */; };
+		C5CEE1762332880200EB5D0F /* AppDelegate+Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CEE1752332880200EB5D0F /* AppDelegate+Notifications.swift */; };
+		C5CEE1782332881C00EB5D0F /* AppDelegate+Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CEE1772332881C00EB5D0F /* AppDelegate+Menu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		C5CEE16C2332792700EB5D0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		C5CEE16E2332792700EB5D0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5CEE16F2332792700EB5D0F /* CleanXcode.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CleanXcode.entitlements; sourceTree = "<group>"; };
+		C5CEE1752332880200EB5D0F /* AppDelegate+Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Notifications.swift"; sourceTree = "<group>"; };
+		C5CEE1772332881C00EB5D0F /* AppDelegate+Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Menu.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,8 @@
 			isa = PBXGroup;
 			children = (
 				C5CEE1672332792600EB5D0F /* AppDelegate.swift */,
+				C5CEE1772332881C00EB5D0F /* AppDelegate+Menu.swift */,
+				C5CEE1752332880200EB5D0F /* AppDelegate+Notifications.swift */,
 				C5CEE1692332792700EB5D0F /* Assets.xcassets */,
 				C5CEE16B2332792700EB5D0F /* MainMenu.xib */,
 				C5CEE16E2332792700EB5D0F /* Info.plist */,
@@ -131,6 +137,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5CEE1682332792600EB5D0F /* AppDelegate.swift in Sources */,
+				C5CEE1762332880200EB5D0F /* AppDelegate+Notifications.swift in Sources */,
+				C5CEE1782332881C00EB5D0F /* AppDelegate+Menu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,7 +275,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = CleanXcode/CleanXcode.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = PY9WJ3M9MW;
@@ -286,7 +293,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = CleanXcode/CleanXcode.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = PY9WJ3M9MW;
