@@ -1,15 +1,15 @@
 //
-//  AppDelegate+Notifications.swift
+//  NotificationHelper.swift
 //  CleanXcode
 //
 //  Created by Itay Brenner on 9/18/19.
 //  Copyright © 2019 Itay Brenner. All rights reserved.
 //
 
-import Foundation
+import Cocoa
 
-extension AppDelegate: NSUserNotificationCenterDelegate {
-    func showNotification(title: String, message: String) -> Void {
+class NotificationHelper: NSObject, NSUserNotificationCenterDelegate {
+    func show(title: String, message: String) -> Void {
         let notification = NSUserNotification()
         notification.title = title
         notification.informativeText = message
