@@ -10,7 +10,7 @@ import Cocoa
 
 class MenuBuilder {
     func buildMenu(_ controller: MenuController, items: [NSMenuItem]) -> NSMenu {
-        let menu = NSMenu.init(title: "Menu")
+        let menu = NSMenu.init(title: NSLocalizedString(Strings.MenuTitle, comment: ""))
         menu.delegate = controller
         
         for item in items {
@@ -20,13 +20,13 @@ class MenuBuilder {
     }
     
     func buildSizeItem(_ controller: MenuController) -> NSMenuItem {
-        return NSMenuItem.init(title: "Calculating size...",
+        return NSMenuItem.init(title: NSLocalizedString(Strings.MenuRowSizePlaceholder, comment: ""),
                                action: nil,
                                keyEquivalent: "")
     }
     
     func buildCleanItem(_ controller: MenuController) -> NSMenuItem {
-        let cleanItem = NSMenuItem.init(title: "Clean DerivedData",
+        let cleanItem = NSMenuItem.init(title: NSLocalizedString(Strings.MenuRowClean, comment: ""),
                                         action: #selector(controller.cleanDerivedData),
                                         keyEquivalent: "c")
         cleanItem.keyEquivalentModifierMask = [.command, .control, .option]
@@ -35,7 +35,7 @@ class MenuBuilder {
     }
     
     func buildLoginItem(_ controller: MenuController) -> NSMenuItem {
-        let item = NSMenuItem.init(title: "Start at Login",
+        let item = NSMenuItem.init(title: NSLocalizedString(Strings.MenuRowAutoStart, comment: ""),
                                action: #selector(controller.startAtLogin),
                                keyEquivalent: "")
         item.target = controller
@@ -43,7 +43,7 @@ class MenuBuilder {
     }
     
     func buildCloseItem(_ controller: MenuController) -> NSMenuItem {
-        let item = NSMenuItem.init(title: "Quit",
+        let item = NSMenuItem.init(title: NSLocalizedString(Strings.MenuRowQuit, comment: ""),
                                action: #selector(controller.exitApp),
                                keyEquivalent: "q")
         item.target = controller

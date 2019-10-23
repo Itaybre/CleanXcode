@@ -10,7 +10,7 @@ import Cocoa
 
 class MenuController: NSObject {
     let notificationHelper: NotificationHelper = NotificationHelper()
-    let derivedDataHelper: DerivedDataHelper = DerivedDataHelper()
+    let derivedDataHelper: DerivedDataManager = DerivedDataManager()
     let menuBuilder: MenuBuilder = MenuBuilder()
     let loginHelper: LoginHelper = LoginHelper()
     
@@ -69,29 +69,9 @@ class MenuController: NSObject {
     
     func updateSize() {
         lastSize = derivedDataHelper.formatedSize()
+        let derivedData = NSLocalizedString(Strings.MenuRowSize, comment: "")
         DispatchQueue.main.sync {
-            self.sizeMenuItem.title = "DerivedData size: \(lastSize)"
+            self.sizeMenuItem.title = "\(derivedData) \(lastSize)"
         }
-    }
-}
-
-extension MenuController: NSMenuDelegate {
-    func menuWillOpen(_ menu: NSMenu) {
-        if lastSize.count > 0 {
-            sizeMenuItem.title = "DerivedData size: \(lastSize)"
-        }
-        DispatchQueue.global().async {
-            self.updateSize()
-        }
-    }
-}
-
-extension MenuController: DerivedDataHelperDelegate {
-    func directoryCleaned() {
-        notificationHelper.show(title: "Success", message: "Successfuly cleared \(lastSize) of space")
-    }
-    
-    func errorCleaning(error: String) {
-        notificationHelper.show(title: "Error", message: "Error while cleaning DerivedData: \(error)")
     }
 }

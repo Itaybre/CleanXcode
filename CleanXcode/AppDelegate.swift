@@ -18,7 +18,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         statusBarItem = NSStatusBar.system.statusItem(withLength:NSStatusItem.squareLength)
         if let button = statusBarItem.button {
-            button.image = NSImage(named:NSImage.Name("icon"))
+            button.image = NSImage(named:NSImage.Name(Constants.StatusIcon))
             button.image?.isTemplate = true
         }
         statusBarItem.menu = menuController.getMenu()

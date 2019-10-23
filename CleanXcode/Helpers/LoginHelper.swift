@@ -10,17 +10,14 @@ import Cocoa
 import ServiceManagement
 
 class LoginHelper {
-    let helperBundleName = "com.itaysoft.CleanXcodeHelper"
-    let autoLoginKey = "AutoLogin"
-    
     func loginEnabled() -> Bool {
-        return UserDefaults.standard.bool(forKey: autoLoginKey)
+        return UserDefaults.standard.bool(forKey: Constants.AutoLoginKey)
     }
     
     func setLoginEnabled(_ enabled: Bool) {
-        let success = SMLoginItemSetEnabled(helperBundleName as CFString, enabled)
+        let success = SMLoginItemSetEnabled(Constants.HelperBundleName as CFString, enabled)
         if success {
-            UserDefaults.standard.set(enabled, forKey: autoLoginKey)
+            UserDefaults.standard.set(enabled, forKey: Constants.AutoLoginKey)
         }
     }
 }

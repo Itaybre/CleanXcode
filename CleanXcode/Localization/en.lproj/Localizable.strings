@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  CleanXcode
+
+  Created by Itay Brenner on 10/23/19.
+  Copyright © 2019 Itay Brenner. All rights reserved.
+*/
+
+"Menu" = "Menu";
+"Calculating size..." = "Calculating size...";
+"Clean DerivedData" = "Clean DerivedData";
+"Start at Login" = "Start at Login";
+"Quit" = "Quit";
+"DerivedData size:" = "DerivedData size:";
+
+"Success" = "Success";
+"Successfuly cleared %s of space" = "Successfuly cleared %s of space";
+"Error" = "Error";
+"Error while cleaning DerivedData: %s" = "Error while cleaning DerivedData: %s";

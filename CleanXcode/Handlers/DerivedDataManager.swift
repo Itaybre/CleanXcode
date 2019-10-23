@@ -8,14 +8,14 @@
 
 import Foundation
 
-protocol DerivedDataHelperDelegate {
+protocol DerivedDataManagerDelegate {
     func directoryCleaned()
     func errorCleaning(error: String)
 }
 
-class DerivedDataHelper {
+class DerivedDataManager {
     let fileManager = FileManager.default
-    var delegate: DerivedDataHelperDelegate?
+    var delegate: DerivedDataManagerDelegate?
     
     func derivedDataFolder() -> String {
         let pw = getpwuid(getuid());

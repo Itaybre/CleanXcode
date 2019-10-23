@@ -7,10 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66BC07552360C8D000274F91 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BC07542360C8D000274F91 /* Constants.swift */; };
+		66BC07572360C96000274F91 /* HelperConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BC07562360C96000274F91 /* HelperConstants.swift */; };
+		66BC075A2360CA5200274F91 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 66BC075C2360CA5200274F91 /* Localizable.strings */; };
+		66BC07612360CB1100274F91 /* MenuController+NSMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BC07602360CB1100274F91 /* MenuController+NSMenu.swift */; };
+		66BC07632360CB5D00274F91 /* MenuController+DerivedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BC07622360CB5D00274F91 /* MenuController+DerivedData.swift */; };
+		66BC07662360CBC100274F91 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BC07652360CBC100274F91 /* Localizable.swift */; };
 		C59176302332C61C00F10B0A /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591762F2332C61C00F10B0A /* NotificationHelper.swift */; };
 		C59176322332CB9A00F10B0A /* MenuBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59176312332CB9A00F10B0A /* MenuBuilder.swift */; };
 		C59176342332CBA500F10B0A /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59176332332CBA500F10B0A /* MenuController.swift */; };
-		C59176362332CDC300F10B0A /* DerivedDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59176352332CDC300F10B0A /* DerivedDataHelper.swift */; };
+		C59176362332CDC300F10B0A /* DerivedDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59176352332CDC300F10B0A /* DerivedDataManager.swift */; };
 		C59176382332D38E00F10B0A /* LoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59176372332D38E00F10B0A /* LoginHelper.swift */; };
 		C59176402333C83000F10B0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591763F2333C83000F10B0A /* AppDelegate.swift */; };
 		C59176422333C83100F10B0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C59176412333C83100F10B0A /* Assets.xcassets */; };
@@ -35,10 +41,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		66BC07542360C8D000274F91 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		66BC07562360C96000274F91 /* HelperConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperConstants.swift; sourceTree = "<group>"; };
+		66BC075B2360CA5200274F91 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		66BC07602360CB1100274F91 /* MenuController+NSMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuController+NSMenu.swift"; sourceTree = "<group>"; };
+		66BC07622360CB5D00274F91 /* MenuController+DerivedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuController+DerivedData.swift"; sourceTree = "<group>"; };
+		66BC07652360CBC100274F91 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		C591762F2332C61C00F10B0A /* NotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
 		C59176312332CB9A00F10B0A /* MenuBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBuilder.swift; sourceTree = "<group>"; };
 		C59176332332CBA500F10B0A /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
-		C59176352332CDC300F10B0A /* DerivedDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DerivedDataHelper.swift; sourceTree = "<group>"; };
+		C59176352332CDC300F10B0A /* DerivedDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DerivedDataManager.swift; sourceTree = "<group>"; };
 		C59176372332D38E00F10B0A /* LoginHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginHelper.swift; sourceTree = "<group>"; };
 		C591763D2333C83000F10B0A /* CleanXcodeHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanXcodeHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C591763F2333C83000F10B0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,9 +84,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		66BC075D2360CA8C00274F91 /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				C59176352332CDC300F10B0A /* DerivedDataManager.swift */,
+			);
+			path = Handlers;
+			sourceTree = "<group>";
+		};
+		66BC075E2360CAB100274F91 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				C59176312332CB9A00F10B0A /* MenuBuilder.swift */,
+				C59176332332CBA500F10B0A /* MenuController.swift */,
+				66BC07602360CB1100274F91 /* MenuController+NSMenu.swift */,
+				66BC07622360CB5D00274F91 /* MenuController+DerivedData.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		66BC075F2360CAD800274F91 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C59176372332D38E00F10B0A /* LoginHelper.swift */,
+				C591762F2332C61C00F10B0A /* NotificationHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		66BC07642360CBA700274F91 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				66BC075C2360CA5200274F91 /* Localizable.strings */,
+				66BC07652360CBC100274F91 /* Localizable.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 		C591763E2333C83000F10B0A /* CleanXcodeHelper */ = {
 			isa = PBXGroup;
 			children = (
+				66BC07562360C96000274F91 /* HelperConstants.swift */,
 				C591763F2333C83000F10B0A /* AppDelegate.swift */,
 				C59176412333C83100F10B0A /* Assets.xcassets */,
 				C59176432333C83100F10B0A /* MainMenu.xib */,
@@ -105,12 +155,12 @@
 		C5CEE1662332792600EB5D0F /* CleanXcode */ = {
 			isa = PBXGroup;
 			children = (
+				66BC07642360CBA700274F91 /* Localization */,
+				66BC075F2360CAD800274F91 /* Helpers */,
+				66BC075E2360CAB100274F91 /* Menu */,
+				66BC075D2360CA8C00274F91 /* Handlers */,
+				66BC07542360C8D000274F91 /* Constants.swift */,
 				C5CEE1672332792600EB5D0F /* AppDelegate.swift */,
-				C59176372332D38E00F10B0A /* LoginHelper.swift */,
-				C59176312332CB9A00F10B0A /* MenuBuilder.swift */,
-				C59176332332CBA500F10B0A /* MenuController.swift */,
-				C59176352332CDC300F10B0A /* DerivedDataHelper.swift */,
-				C591762F2332C61C00F10B0A /* NotificationHelper.swift */,
 				C5CEE1692332792700EB5D0F /* Assets.xcassets */,
 				C5CEE16B2332792700EB5D0F /* MainMenu.xib */,
 				C5CEE16E2332792700EB5D0F /* Info.plist */,
@@ -214,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5CEE16A2332792700EB5D0F /* Assets.xcassets in Resources */,
+				66BC075A2360CA5200274F91 /* Localizable.strings in Resources */,
 				C5CEE16D2332792700EB5D0F /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -226,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C59176402333C83000F10B0A /* AppDelegate.swift in Sources */,
+				66BC07572360C96000274F91 /* HelperConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,9 +286,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C59176342332CBA500F10B0A /* MenuController.swift in Sources */,
-				C59176362332CDC300F10B0A /* DerivedDataHelper.swift in Sources */,
+				66BC07632360CB5D00274F91 /* MenuController+DerivedData.swift in Sources */,
+				66BC07662360CBC100274F91 /* Localizable.swift in Sources */,
+				C59176362332CDC300F10B0A /* DerivedDataManager.swift in Sources */,
 				C59176322332CB9A00F10B0A /* MenuBuilder.swift in Sources */,
+				66BC07612360CB1100274F91 /* MenuController+NSMenu.swift in Sources */,
 				C5CEE1682332792600EB5D0F /* AppDelegate.swift in Sources */,
+				66BC07552360C8D000274F91 /* Constants.swift in Sources */,
 				C59176302332C61C00F10B0A /* NotificationHelper.swift in Sources */,
 				C59176382332D38E00F10B0A /* LoginHelper.swift in Sources */,
 			);
@@ -245,6 +301,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		66BC075C2360CA5200274F91 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66BC075B2360CA5200274F91 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		C59176432333C83100F10B0A /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
